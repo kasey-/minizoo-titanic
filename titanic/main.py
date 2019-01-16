@@ -22,6 +22,5 @@ def titanic():
     pclass    = int(request.form['pclass'])
     embarked  = int(request.form['embarked'])
     fare      = float(request.form['fare'])
-    passanger = [[is_child, sex, pclass, embarked, fare]]
-#    print(passanger)
-    return rf.predict_proba(passanger)[0][1].astype('str')
+    passenger = [[is_child, sex, pclass, embarked, fare]]
+    return rf.predict_proba(passenger)[0][1].astype('str')
